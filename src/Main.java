@@ -12,7 +12,11 @@ public class Main {
         if(prepareData()) {
             GradientDescent gd = new GradientDescent(0);
             gd.train(0.0001, trainingSet, 1000);
-            System.out.println(gd.getResult(new double[]{68.76573426962166}));
+            double [] x = new double[args.length];
+            for (int i = 0; i < args.length; i++) {
+                x[i] = Double.valueOf(args[i]);
+            }
+            System.out.println(gd.getResult(x));
         }
     }
 

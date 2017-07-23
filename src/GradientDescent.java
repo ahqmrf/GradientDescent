@@ -16,7 +16,7 @@ public class GradientDescent {
     }
 
     public double getHypothesis(int pos) {
-        double result = theta[0];
+        double result = 0;
         for (int i = 0; i < numberOfVariables; i++) {
             result += theta[i] * trainingSet[pos][i];
         }
@@ -63,10 +63,6 @@ public class GradientDescent {
                 this.trainingSet[i][j + 1] = trainingSet[i][j];
             }
         }
-    }
-
-    public void setTheta(double[] theta) {
-        this.theta = theta;
     }
 
     public double getResult(double [] x) {
